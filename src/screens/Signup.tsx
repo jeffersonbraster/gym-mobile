@@ -47,7 +47,6 @@ export function SignUp() {
             placeholder="E-mail"
             keyboardType="email-address"
             autoCapitalize="none"
-            mt={4}
           />
 
           <Input placeholder="Senha" secureTextEntry />
