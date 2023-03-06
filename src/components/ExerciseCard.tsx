@@ -1,0 +1,48 @@
+import { TouchableOpacity, TouchableOpacityProps } from "react-native";
+import { Heading, HStack, Image, Text, VStack, Icon } from "native-base";
+import { Entypo } from "@expo/vector-icons";
+
+type props = TouchableOpacityProps & {};
+
+export function ExerciseCard({ ...rest }: props) {
+  return (
+    <TouchableOpacity {...rest}>
+      <HStack
+        bg="gray.500"
+        alignItems="center"
+        p={2}
+        pr={4}
+        rounded="md"
+        mb={3}
+      >
+        <Image
+          source={{
+            uri: "https://cdn.fisiculturismo.com.br/monthly_2021_09/remada-aberta-curvada-com-halter-inicial-media.webp.08fca43e31486c5151146662057e8659.webp",
+          }}
+          alt="Imagem do exercicio de remada curvada"
+          w={16}
+          h={16}
+          rounded="md"
+          mr={4}
+          resizeMode="cover"
+        />
+
+        <VStack flex={1}>
+          <Heading fontSize="lg" color="white" fontFamily="heading">
+            Remada curvada
+          </Heading>
+          <Text fontSize="sm" color="gray.200" mt={1} numberOfLines={2}>
+            3 séries x 12 repetições
+          </Text>
+        </VStack>
+
+        <Icon
+          as={Entypo}
+          name="chevron-thin-right"
+          color="gray.300"
+          ml="auto"
+        />
+      </HStack>
+    </TouchableOpacity>
+  );
+}
